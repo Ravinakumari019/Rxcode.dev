@@ -1,0 +1,243 @@
+*{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family:  'Arial Narrow Bold', sans-serif;
+}
+body{
+     background-color: rgb(30, 27, 27);
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+ width: 50%;
+ padding: 2rem;
+}
+.right{
+ width: 50%;
+ background: linear-gradient(90deg, #5170ff, #ff00c7);
+ padding: 2rem;
+ border-top-left-radius: 5rem;
+border-bottom-left-radius: 5rem;
+}
+
+.logo {
+       position: absolute;
+          top: 0.5rem;
+          left: 0.5rem;
+      }
+
+        .logo img {
+          position: absolute;
+          height: 120px;
+          width: auto;
+        }
+
+.profile-img img{
+   width: 300px;
+  height: 300px;
+  border-radius: 50px;
+  object-fit: cover;
+  display: block;
+  margin: 100px auto 20px auto;
+}
+
+h1{
+  margin: 0%;
+}
+
+.waving {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: aliceblue;
+  margin: 50px;
+  margin-top: 0%;
+  margin-bottom:0% ;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100%{ transform: rotate(0deg); }
+}
+
+#title{
+  color: white;
+  margin :50px;
+   margin-top: 10px;
+  margin-bottom:0% ;
+}
+
+#connect-btn{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 80px;
+  margin-left: 310px;
+  margin-bottom:10px;
+
+}
+#connect-btn:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spacing between icons */
+  margin-top: 30px;
+  
+}
+
+.icon i {
+  font-size: 28px;
+  color: rgb(60, 103, 205);
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+ 
+}
+
+.icon i:hover {
+  color: #ff00c7; /* or any accent color */
+  transform: scale(1.2);
+}
+
+.footer p{
+  color: aliceblue;
+  font-size: large;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.footer .heart {
+  color: #ff00c7;
+}
+
+.heart {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+ul li{
+margin-bottom: 10px;
+}
+
+.right-buttons {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.right-btn {
+  background-color: rgb(3, 3, 3);
+  color: rgb(255, 253, 253);
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.right-btn:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left, .right {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0;
+  }
+  .right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    min-height: 300px;
+  }
+  .profile-img img {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto 20px auto;
+  }
+  #connect-btn {
+    margin: 40px auto 10px auto;
+    display: block;
+  }
+  .waving, #title {
+    margin: 20px auto 0 auto;
+    text-align: center;
+  }
+  .right{
+ width: 100%;
+ background: linear-gradient(90deg, #5170ff, #ff00c7);
+ padding: 2rem;
+border-radius: 5rem; 
+}
+
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    padding: 0;
+  }
+  .left, .right {
+    padding: 1rem;
+  }
+  .profile-img img {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto 10px auto;
+  }
+  .waving, #title {
+    font-size: 1.2rem;
+    margin: 10px auto 0 auto;
+  }
+  #connect-btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+    margin: 20px auto 10px auto;
+  }
+  .footer p {
+    font-size: medium;
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+/* ...existing code... */
